@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <h1>Student Management Portal</h1>
+
+        <p id="welcome"></p>
+        <div class="menu">
+               <button onclick="openStudents()">Student Management</button>
+
+            <button onclick="openAttendance()">Attendance</button>
+
+            <button onclick="openMarks()">Marks</button>
+
+            <button onclick="openReports()">Reports</button>
+
+            <button class="logout" onclick="logout()">Logout</button>
+            </div>
+
+    </div>
+
+    <!-- <script>
+
+        let username = sessionStorage.getItem("username");
+
+        document.getElementById("welcome").textContent = "Welcome, " + username;
+
+        function logout() {
+            sessionStorage.clear();
+            window.location.href = "index.html";
+        }
+
+    </script> -->
+<script src="js/dashboard.js"></script>
+</body>
+</html>

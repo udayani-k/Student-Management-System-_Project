@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/studentlist.css">
+</head>
+
+<body>
+
+    <div class="student-container">
+
+<label for="search">Search Student</label>
+
+<input
+type="text"
+id="search"
+placeholder="Search by Student ID, Name or Email"
+onkeyup="searchStudent()">
+
+<br><br>
+<label for="departmentFilter">Filter by Department</label>
+
+<select id="departmentFilter" onchange="filterDepartment()">
+
+    <option value="All">All Departments</option>
+
+    <option value="MCA">MCA</option>
+
+    <option value="CSE">CSE</option>
+
+    <option value="ECE">ECE</option>
+
+    <option value="EEE">EEE</option>
+
+    <option value="BCA">BCA</option>
+
+</select>
+
+<br><br>
+<button onclick="sortById()">Sort by Student ID</button>
+
+<button onclick="sortByName()">Sort by Name</button>
+
+<br><br>
+        <h1>Student Records</h1>
+
+        <table id="studentTable">
+
+            <thead>
+
+                <tr>
+
+                    <th>Student ID</th>
+
+                    <th>Full Name</th>
+
+                    <th>Email</th>
+
+                    <th>Department</th>
+
+                    <th>Year</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+                <!-- Student records will appear here -->
+
+            </tbody>
+
+        </table>
+
+        <br>
+        <div class="pagination">
+
+    <button onclick="previousPage()">Previous</button>
+
+    <span id="pageNumber">1</span>
+
+    <button onclick="nextPage()">Next</button>
+
+</div>
+
+        <button onclick="window.location.href='students.html'">
+            Add New Student
+        </button>
+
+        <button onclick="window.location.href='dashboard.html'">
+            Back to Dashboard
+        </button>
+
+    </div>
+
+    <script src="js/studentlist.js"></script>
+
+</body>
+</html>

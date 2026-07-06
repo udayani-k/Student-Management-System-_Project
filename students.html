@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="student-container">
+
+        <h1>Student Registration Form</h1>
+
+        <form id="studentForm">
+
+            <h2>Personal Information</h2>
+ <!-- Student ID -->
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" name="studentId"
+            placeholder="Enter Student ID" required>
+
+            <br><br>
+
+            <!-- Full Name -->
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName"
+            placeholder="Enter Full Name" required>
+
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"
+            placeholder="Enter Email Address" required>
+
+            <br><br>
+
+            <!-- Mobile Number -->
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile"
+            placeholder="Enter Mobile Number"
+            maxlength="10" required>
+
+            <br><br>
+
+            <!-- Gender -->
+            <label>Gender</label>
+
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+
+            <br><br>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <br><br>
+            <!-- Academic Information -->
+
+<h2>Academic Information</h2>
+
+<!-- Department -->
+<label for="department">Department</label>
+
+<select id="department" name="department" required>
+
+    <option value="">--Select Department--</option>
+
+    <option value="MCA">MCA</option>
+
+    <option value="CSE">CSE</option>
+
+    <option value="ECE">ECE</option>
+
+    <option value="EEE">EEE</option>
+
+    <option value="BCA">BCA</option>
+
+</select>
+
+<br><br>
+
+<!-- Year -->
+
+<label for="year">Year</label>
+
+<select id="year" name="year" required>
+
+    <option value="">--Select Year--</option>
+
+    <option value="1st Year">1st Year</option>
+
+    <option value="2nd Year">2nd Year</option>
+
+    <option value="3rd Year">3rd Year</option>
+
+    <option value="4th Year">4th Year</option>
+
+</select>
+
+<br><br>
+
+<!-- Semester -->
+
+<label for="semester">Semester</label>
+
+<select id="semester" name="semester" required>
+
+    <option value="">--Select Semester--</option>
+
+    <option value="Semester 1">Semester 1</option>
+
+    <option value="Semester 2">Semester 2</option>
+
+    <option value="Semester 3">Semester 3</option>
+
+    <option value="Semester 4">Semester 4</option>
+
+</select>
+
+<br><br>
+
+<!-- Section -->
+
+<label for="section">Section</label>
+
+<input type="text"
+id="section"
+name="section"
+placeholder="Enter Section"
+required>
+
+<br><br>
+
+<!-- Roll Number -->
+
+<label for="rollNo">Roll Number</label>
+
+<input type="text"
+id="rollNo"
+name="rollNo"
+placeholder="Enter Roll Number"
+required>
+
+<br><br>
+<!-- Skills Section -->
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+    <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+
+    <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+
+    <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+
+    <label><input type="checkbox" name="skills" value="React"> React</label>
+
+    <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+
+
+</div>
+
+<br>
+-
+<!-- Address Information -->
+
+<h2>Address Information</h2>
+
+<!-- House Number -->
+
+<label for="houseNo">House No</label>
+<input type="text"
+id="houseNo"
+name="houseNo"
+placeholder="Enter House Number"
+required>
+
+<br><br>
+
+<!-- Street -->
+
+<label for="street">Street</label>
+<input type="text"
+id="street"
+name="street"
+placeholder="Enter Street Name"
+required>
+
+<br><br>
+
+<!-- Village / Town -->
+
+<label for="village">Village / Town</label>
+<input type="text"
+id="village"
+name="village"
+placeholder="Enter Village or Town"
+required>
+
+<br><br>
+
+<!-- City -->
+
+<label for="city">City</label>
+<input type="text"
+id="city"
+name="city"
+placeholder="Enter City"
+required>
+
+<br><br>
+
+<!-- District -->
+
+<label for="district">District</label>
+<input type="text"
+id="district"
+name="district"
+placeholder="Enter District"
+required>
+
+<br><br>
+
+<!-- State -->
+
+<label for="state">State</label>
+<input type="text"
+id="state"
+name="state"
+placeholder="Enter State"
+required>
+
+<br><br>
+
+<!-- Country -->
+
+<label for="country">Country</label>
+<input type="text"
+id="country"
+name="country"
+placeholder="Enter Country"
+required>
+
+<br><br>
+
+<!-- Pincode -->
+
+<label for="pincode">Pincode</label>
+<input type="number"
+id="pincode"
+name="pincode"
+placeholder="Enter Pincode"
+maxlength="6"
+required>
+
+<br><br>
+<!-- Documents Section -->
+
+<h2>Documents</h2>
+
+<!-- Profile Photo -->
+
+<label for="photo">Profile Photo</label>
+
+<input
+type="file"
+id="photo"
+name="photo"
+accept="image/*">
+
+<br><br>
+
+<!-- Resume -->
+
+<label for="resume">Resume</label>
+
+<input
+type="file"
+id="resume"
+name="resume"
+accept=".pdf,.doc,.docx">
+
+<br><br>
+<!-- Audio & Video Introduction -->
+
+<h2>Introduction</h2>
+
+<!-- Audio Introduction -->
+
+<label for="audio">Audio Introduction (Optional)</label>
+
+<input
+type="file"
+id="audio"
+name="audio"
+accept="audio/*">
+
+<br><br>
+
+<!-- Video Introduction -->
+
+<label for="video">Video Introduction (Optional)</label>
+
+<input
+type="file"
+id="video"
+name="video"
+accept="video/*">
+
+<br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+    </div>
+
+    <script src="js/student.js"></script>
+</body>
+</html>
