@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance</title>
-    <style>
-        body{
-            background:blanchedalmond;
-            font-family: Arial, sans-serif;
-            color:black;
-            font-weight: bold;
-            text-align: center;
-            font-size: 30px;
-         }
 
-    </style>
+    <title>Attendance Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/attendance.css">
+
 </head>
+
 <body>
-    <h1>Attendance Page</h1>
+
+<div class="attendance-container">
+
+    <h1>Attendance Management</h1>
+
+    <table id="attendanceTable">
+
+        <thead>
+
+            <tr>
+
+                <th>Student ID</th>
+                <th>Full Name</th>
+                <th>Department</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="attendanceBody">
+
+            <!-- Student Records Will Display Here -->
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <button onclick="window.location.href='attendancelist.html'">
+        View Attendance History
+    </button>
+
+    <button onclick="window.location.href='attendancepercentage.html'">
+    Attendance Percentage
+</button>
+<button onclick="window.location.href='monthlyreport.html'">
+    Monthly Attendance Report
+</button>
+
+<button onclick="window.location.href='dashboard.html'">
+        Back to Dashboard
+    </button>
+
+</div>
+
+<script src="js/attendance.js"></script>
 
 </body>
 </html>

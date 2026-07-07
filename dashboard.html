@@ -10,23 +10,103 @@
 </head>
 
 <body>
+    <!-- <div class="top-info">
+
+    <p><strong>User:</strong> <span id="loggedUser"></span></p>
+
+    <p><strong>Date:</strong> <span id="currentDate"></span></p>
+
+    <p><strong>Time:</strong> <span id="currentTime"></span></p>
+
+</div> -->
+<div class="dashboard-wrapper">
 
     <div class="dashboard">
 
         <h1>Student Management Portal</h1>
 
-        <p id="welcome"></p>
+        <h2 id="welcome"></h2>
+        <div class="top-info">
+
+    <div class="info-card">
+        <h3>User</h3>
+        <p id="loggedUser"></p>
+    </div>
+
+    <div class="info-card">
+        <h3>Date</h3>
+        <p id="currentDate"></p>
+    </div>
+
+    <div class="info-card">
+        <h3>Time</h3>
+        <p id="currentTime"></p>
+    </div>
+
+</div>
+
+<div class="dashboard-stats">
+
+    <div class="card">
+        <h3>Total Students</h3>
+        <p id="totalStudents">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Departments</h3>
+        <p id="totalDepartments">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Present Students</h3>
+        <p id="presentStudents">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Absent Students</h3>
+        <p id="absentStudents">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Highest Scoring Student</h3>
+        <p id="highestStudent">Not Available</p>
+    </div>
+
+    <div class="card">
+        <h3>Recent Student</h3>
+        <p id="recentStudent">Not Available</p>
+    </div>
+
+</div>
         <div class="menu">
-               <button onclick="openStudents()">Student Management</button>
+            <button onclick="openStudentProfile()">Dashboard</button>
+               <button onclick="openStudents()">StudentProfile</button>
+              
+
 
             <button onclick="openAttendance()">Attendance</button>
 
             <button onclick="openMarks()">Marks</button>
 
             <button onclick="openReports()">Reports</button>
+            <button onclick="openSettings()">Settings</button>
+            <button onclick="openAbout()">About</button>
 
+             <button onclick="openContact()">Contact</button>
             <button class="logout" onclick="logout()">Logout</button>
-            </div>
+            </div> 
+
+              <!-- <div class="top-info">
+
+        <p><strong>User:</strong> <span id="loggedUser"></span></p>
+
+        <p><strong>Date:</strong> <span id="currentDate"></span></p>
+
+        <p><strong>Time:</strong> <span id="currentTime"></span></p>
+
+
+
+</div> -->
 
     </div>
 

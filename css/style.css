@@ -8,14 +8,16 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background:darksalmon;
+    background:beige;
     min-height: 100vh;
     padding:30px;
-
+    background-image: url("../images/login\ image.jpg");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-position: center;
 }
 
 
@@ -29,26 +31,30 @@ body {
 
 
 .container {
-    width: 400px;
-    background-color:darkseagreen;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    width: 800px;
+    background-color:paleturquoise;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+   
 }
 
 
 
 .container h2 {
     text-align: center;
-    color:chartreuse;
-    margin-bottom: 25px;
+    color:#dc3545;
+    margin-bottom: 30px;
+    font: size 32px;
+
 }
 
 label {
-    display: block;
+    display:block;
     margin-top: 15px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-weight: bold;
+    font-size:18px;
 }
 
 
@@ -56,12 +62,63 @@ label {
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid #cccccc;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 8px;
 }
 
+    /* position: absolute;
+    top: 20px;
+    right: 30px;
+    color:burlywood;
+    font-size: 30px;
+    text-align:center;
+    font-weight: bold; */
+    /* .top-info{
+    text-align: right;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.top-info p{
+    margin: 4px 0;
+} */
+/* Dashboard Statistics */
+
+.dashboard-stats{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card{
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card h3{
+    color: #4b0082;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
 
 .remember {
     display: flex;
@@ -77,13 +134,13 @@ input[type="password"] {
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     margin-top: 20px;
-    background-color:blueviolet;
+    background-color:#6a0dad;
     color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 17px;
+    border-radius: 8px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -100,34 +157,193 @@ button:hover {
     color: red;
     font-weight: bold;
 }
-.dashboard {
+/* .dashboard {
     width: 500px;
     background: white;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+} */
+/* Dashboard */
+
+.dashboard{
+    width: 700px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 95%;
+    position:relative;
+    min-height:800px;
 }
 
-#welcome {
-    font-size: 20px;
+/* Heading */
+
+.dashboard h1{
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+#welcome{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
     color: #333;
-    margin-bottom: 20px;
 }
 
-.menu {
+/* Logged User, Date & Time */
+
+/* .top-info{
+    text-align: right;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+} */
+ .dashboard-wrapper{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.top-info{
+    /* position: fixed;
+    top: 20px;
+    right: 30px;
+
+    background: rgba(255,255,255,0.9);
+    padding: 15px;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+
+    z-index: 1000;
+    width:180px; */
+    /* display:flex;
+    justify-content: space-between;
+    gap:20px;
+    margin:20px;
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+
+    margin-left: 30px; */
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+    width: 100%;
+}
+.info-card{
+    /* color: #6a0dad;
+    font-size: 20px;
+    margin-bottom: 10px; */
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+.info-card h3{
+    color: #6a0dad;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-card p{
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.top-info p{
+    margin: 8px 0;
+}
+.top-info span{
+    color:black;
+    /* font-weight:bold; */
+}
+
+/* Statistics Cards */
+
+.dashboard-stats{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card{
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.card h3{
+    color: #6a0dad;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu Buttons */
+
+.menu{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.logout {
-    background-color: #dc3545;
+.menu button{
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: blueviolet;
+    color: white;
+    cursor: pointer;
 }
 
-.logout:hover {
-    background-color: #bb2d3b;
+.menu button:hover{
+    background: #6a0dad;
 }
+
+.logout{
+    background: #dc3545 !important;
+}
+
+.logout:hover{
+    background: #bb2d3b !important;
+}
+
+
+
+
+
 /* ========================= */
 /* Student Registration Form */
 /* ========================= */

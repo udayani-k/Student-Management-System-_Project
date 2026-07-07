@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monthly Attendance Report</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/monthlyreport.css">
+
+</head>
+
+<body>
+
+<div class="attendance-container">
+
+    <h1>Monthly Attendance Report</h1>
+
+    <label>Select Month</label>
+
+    <input type="month" id="month">
+
+    <br><br>
+
+    <button onclick="generateReport()">
+        Generate Report
+    </button>
+
+    <br><br>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Department</th>
+                <th>Date</th>
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="reportBody">
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <button onclick="window.location.href='attendance.html'">
+        Back
+    </button>
+
+</div>
+
+<script src="js/monthlyreport.js"></script>
+
+</body>
+
+</html>

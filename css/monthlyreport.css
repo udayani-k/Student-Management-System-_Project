@@ -1,0 +1,69 @@
+.attendance-container{
+    width: 950px;
+    max-width: 95%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+.attendance-container h1{
+    text-align: center;
+    color: #4b0082;
+    margin-bottom: 25px;
+}
+
+label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type="month"]{
+    width: 250px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    background: #6a0dad;
+    color: white;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+td{
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background: #f8f9fa;
+}
+
+tr:hover{
+    background: #ececec;
+}
+
+button{
+    width: 220px;
+    padding: 12px;
+    margin: 10px;
+    background: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #6a0dad;
+}

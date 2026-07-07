@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <h1>Student Profile</h1>
+
+        <!-- Personal Information -->
+        <div class="profile-section">
+
+            <h2>Personal Information</h2>
+
+            <p><strong>Student ID:</strong> <span id="studentId"></span></p>
+
+            <p><strong>Full Name:</strong> <span id="fullName"></span></p>
+
+            <p><strong>Email:</strong> <span id="email"></span></p>
+
+            <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+
+            <p><strong>Gender:</strong> <span id="gender"></span></p>
+
+            <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+
+        </div>
+
+        <!-- Academic Information -->
+        <div class="profile-section">
+
+            <h2>Academic Information</h2>
+
+            <p><strong>Department:</strong> <span id="department"></span></p>
+
+            <p><strong>Year:</strong> <span id="year"></span></p>
+
+            <p><strong>Semester:</strong> <span id="semester"></span></p>
+
+            <p><strong>Section:</strong> <span id="section"></span></p>
+
+            <p><strong>Roll Number:</strong> <span id="rollNo"></span></p>
+
+        </div>
+
+        <!-- Skills -->
+        <div class="profile-section">
+
+            <h2>Skills</h2>
+
+            <p id="skills"></p>
+
+        </div>
+
+        <!-- Address -->
+        <div class="profile-section">
+
+            <h2>Address</h2>
+
+            <p><strong>House No:</strong> <span id="houseNo"></span></p>
+
+            <p><strong>Street:</strong> <span id="street"></span></p>
+
+            <p><strong>Village:</strong> <span id="village"></span></p>
+
+            <p><strong>City:</strong> <span id="city"></span></p>
+
+            <p><strong>District:</strong> <span id="district"></span></p>
+
+            <p><strong>State:</strong> <span id="state"></span></p>
+
+            <p><strong>Country:</strong> <span id="country"></span></p>
+
+            <p><strong>Pincode:</strong> <span id="pincode"></span></p>
+
+        </div>
+
+        <!-- Attendance -->
+        <div class="profile-section">
+
+            <h2>Attendance</h2>
+
+            <p id="attendance">Not Available</p>
+
+        </div>
+
+        <!-- Marks -->
+        <div class="profile-section">
+
+            <h2>Marks</h2>
+
+            <p id="marks">Not Available</p>
+
+        </div>
+
+        <!-- Uploaded Documents -->
+      <h2>Uploaded Documents</h2>
+
+<div class="profile-section">
+
+    <p><strong>Profile Photo</strong></p>
+    <img id="profileImage" width="150">
+
+    <br><br>
+
+    <p>
+        <strong>Resume:</strong>
+        <span id="resumeName"></span>
+    </p>
+
+</div>
+
+           
+
+        <br>
+
+        <button onclick="window.location.href='studentlist.html'">
+            Back to Student List
+        </button>
+
+    </div>
+
+    <script src="js/studentprofile.js"></script>
+
+</body>
+</html>

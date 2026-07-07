@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Attendance</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="student-container">
+
+    <h1>Update Attendance</h1>
+
+    <label>Student ID</label>
+    <input type="text" id="studentId" readonly>
+
+    <label>Student Name</label>
+    <input type="text" id="studentName" readonly>
+
+    <label>Department</label>
+    <input type="text" id="department" readonly>
+
+    <label>Date</label>
+    <input type="date" id="date">
+
+    <label>Status</label>
+
+    <select id="status">
+
+        <option value="Present">Present</option>
+
+        <option value="Absent">Absent</option>
+
+    </select>
+
+    <br><br>
+
+    <button onclick="updateAttendance()">
+        Update Attendance
+    </button>
+
+    <button onclick="window.location.href='attendancelist.html'">
+        Cancel
+    </button>
+
+</div>
+
+<script src="js/updateattendance.js"></script>
+
+</body>
+</html>
