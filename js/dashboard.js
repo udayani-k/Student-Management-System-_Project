@@ -48,14 +48,23 @@ alert("Dashboard JS Loaded");
 
 document.getElementById("welcome").textContent = "Welcome";
 // Logged In User
-let username = sessionStorage.getItem("username");
+// Logged In User
+
+let username =
+localStorage.getItem("username") ||
+sessionStorage.getItem("username");
 
 if(username){
+
     document.getElementById("loggedUser").textContent = username;
     document.getElementById("welcome").textContent = "Welcome, " + username;
-}else{
+
+}
+else{
+
     document.getElementById("loggedUser").textContent = "Guest";
     document.getElementById("welcome").textContent = "Welcome";
+
 }
 
 // Current Date
@@ -133,10 +142,10 @@ if (students.length > 0) {
 
 
 function openStudents() {
-    alert("Student button clicked");
+    alert("Student registration Form Opened");
     window.location.href = "students.html";
 }
-function openStudents() {
+function openStudentsProfile() {
     alert("Student button clicked")
     window.location.href = "studentprofile.html";
 }

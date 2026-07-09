@@ -2,20 +2,23 @@
 
 .profile-container{
 
-    width:800px;
+    width:1200px;
     background:white;
     margin:30px auto;
-    padding:30px;
+    padding:40px;
     border-radius:12px;
     box-shadow:0px 8px 20px rgba(0,0,0,0.2);
+    max-width:95%;
+    min-height:900px;
+
 
 }
 
 .profile-container h1{
-
+    font-size:36px;
     text-align:center;
     color:#4b0082;
-    margin-bottom:25px;
+    margin-bottom:30px;
 
 }
 

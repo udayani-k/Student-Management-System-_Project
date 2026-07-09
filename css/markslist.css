@@ -1,0 +1,95 @@
+/* ===============================
+   Marks History
+=============================== */
+
+.marks-container{
+    width:1500px;
+    max-width:98%;
+    margin:30px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    min-height:550px;
+    overflow-x:auto;
+}
+
+/* Heading */
+
+.marks-container h1{
+    text-align:center;
+    color:blueviolet;
+    font-size:38px;
+    margin-bottom:25px;
+}
+
+/* Table */
+
+.marks-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.marks-table th{
+    background:blueviolet;
+    color:white;
+    padding:15px;
+    border:1px solid #ddd;
+    font-size:17px;
+}
+
+.marks-table td{
+    padding:12px;
+    text-align:center;
+    border:1px solid #ddd;
+    font-size:16px;
+}
+
+.marks-table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+.marks-table tr:hover{
+    background:#ececec;
+}
+
+/* Action Buttons */
+
+.marks-table button{
+    width:80px;
+    padding:8px;
+    margin:2px;
+    background:blueviolet;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.marks-table button:hover{
+    background:#6a0dad;
+}
+
+/* Bottom Buttons */
+
+.bottom-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.bottom-buttons button{
+    width:220px;
+    padding:12px;
+    font-size:18px;
+    background:blueviolet;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.bottom-buttons button:hover{
+    background:#6a0dad;
+}

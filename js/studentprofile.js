@@ -63,3 +63,8 @@ if (student.photo) {
 } else {
     document.getElementById("profileImage").alt = "No Photo Uploaded";
 }
+
+
+function goToAttendance() {
+    window.location.href = "attendance.html";
+}

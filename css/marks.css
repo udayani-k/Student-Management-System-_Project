@@ -1,0 +1,110 @@
+/* ===========================
+   Marks Management
+=========================== */
+
+.marks-container{
+    width: 1500px;
+    max-width: 98%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    min-height: 550px;
+    overflow-x: auto;
+}
+
+/* Heading */
+
+.marks-container h1{
+    text-align: center;
+    color: blueviolet;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+/* Table */
+
+.marks-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.marks-table th{
+    background: blueviolet;
+    color: white;
+    padding: 14px;
+    font-size: 17px;
+    border: 1px solid #ddd;
+}
+
+.marks-table td{
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Input Boxes */
+
+.marks-table input{
+    width: 60px;
+    height: 38px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Remove Up & Down Arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Save Button */
+
+.marks-table button{
+    width: 80px;
+    padding: 8px;
+    background: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.marks-table button:hover{
+    background: #6a0dad;
+}
+
+/* Bottom Buttons */
+
+.bottom-buttons{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bottom-buttons button{
+    width: 220px;
+    padding: 12px;
+    font-size: 18px;
+    background: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.bottom-buttons button:hover{
+    background: #6a0dad;
+}

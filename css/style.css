@@ -18,6 +18,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -168,14 +169,15 @@ button:hover {
 /* Dashboard */
 
 .dashboard{
-    width: 700px;
+    width: 1200px;
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     max-width: 95%;
     position:relative;
-    min-height:800px;
+    min-height:900px;
+
 }
 
 /* Heading */
@@ -349,10 +351,11 @@ button:hover {
 /* ========================= */
 
 .student-container{
-    width:700px;
-    max-width:100%;
+    width:1200px;
+    max-width:95%;
+    min-height:900px;
     background:white;
-    padding:30px;
+    padding:40px;
     border-radius:12px;
     box-shadow:0px 8px 20px rgba(0,0,0,0.2);
     margin:30px auto;
@@ -362,6 +365,7 @@ button:hover {
     text-align:center;
     color:#4b0082;
     margin-bottom:20px;
+    font-size:36px;
 }
 
 .student-container h2{
@@ -383,10 +387,10 @@ select,
 textarea,
 input[type="file"]{
     width:100%;
-    padding:12px;
+    padding:15px;
     border:1px solid #cccccc;
     border-radius:6px;
-    font-size:15px;
+    font-size:20px;
 }
 
 /* Textarea */
@@ -449,4 +453,62 @@ button[type="reset"]{
 
 button[type="reset"]:hover{
     background:#bb2d3b;
+}
+
+/* ==========================
+   Global Dark Mode
+========================== */
+
+body.dark-mode{
+    background:#1f1f1f;
+    color:white;
+}
+
+body.dark-mode .dashboard,
+body.dark-mode .student-container,
+body.dark-mode .attendance-container,
+body.dark-mode .marks-container,
+body.dark-mode .reports-container,
+body.dark-mode .settings-container{
+
+    background:#2d2d2d;
+    color:white;
+
+}
+
+body.dark-mode table{
+
+    background:#2d2d2d;
+    color:white;
+
+}
+
+body.dark-mode th{
+
+    background:#6a0dad;
+    color:white;
+
+}
+
+body.dark-mode td{
+
+    background:#3b3b3b;
+    color:white;
+
+}
+
+body.dark-mode input,
+body.dark-mode select{
+
+    background:#444;
+    color:white;
+    border:1px solid #777;
+
+}
+
+body.dark-mode button{
+
+    background:#6a0dad;
+    color:white;
+
 }

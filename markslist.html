@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Marks Management</title>
+    <title>Marks History</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/marks.css">
+    <link rel="stylesheet" href="css/markslist.css">
 
 </head>
 
@@ -17,7 +17,7 @@
 
 <div class="marks-container">
 
-    <h1>Marks Management</h1>
+    <h1>Marks History</h1>
 
     <table class="marks-table">
 
@@ -46,9 +46,7 @@
 
         </thead>
 
-        <tbody id="marksBody">
-
-            <!-- Student Records -->
+        <tbody id="marksTableBody">
 
         </tbody>
 
@@ -56,12 +54,9 @@
 
     <div class="bottom-buttons">
 
-        <button onclick="window.location.href='markslist.html'">
-            View Marks History
+        <button onclick="window.location.href='marks.html'">
+            Back to Marks
         </button>
-          <button onclick="window.location.href='reports.html'">
-        Next → Reports
-    </button>
 
         <button onclick="window.location.href='dashboard.html'">
             Back to Dashboard
@@ -70,8 +65,8 @@
     </div>
 
 </div>
-<script src="js/theme.js"></script>
-<script src="js/marks.js"></script>
+
+<script src="js/markslist.js"></script>
 
 </body>
 </html>
