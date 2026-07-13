@@ -84,22 +84,41 @@ function editStudent(index){
 // ==========================
 // Delete Student
 // ==========================
-function deleteStudent(index){
+// function deleteStudent(index){
+
+//     let confirmDelete = confirm("Are you sure you want to delete this student?");
+
+//     if(confirmDelete){
+
+//         students.splice(index,1);
+
+//         localStorage.setItem("students", JSON.stringify(students));
+
+//         displayStudents();
+
+//     }
+
+// }
+  function deleteStudent(index){
 
     let confirmDelete = confirm("Are you sure you want to delete this student?");
 
     if(confirmDelete){
 
-        students.splice(index,1);
+        let studentId = students[index].studentId;
 
-        localStorage.setItem("students", JSON.stringify(students));
+        deleteStudentData(studentId);
+
+        alert("Student deleted successfully.");
+
+        // Reload latest data
+        students = JSON.parse(localStorage.getItem("students")) || [];
 
         displayStudents();
 
     }
 
 }
-
 // ==========================
 // Search Student
 // ==========================

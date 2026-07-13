@@ -1,15 +1,10 @@
-// ===============================
-// Load Students & Existing Marks
-// ===============================
+
 
 let students = JSON.parse(localStorage.getItem("students")) || [];
 let marks = JSON.parse(localStorage.getItem("marks")) || [];
 
 let marksBody = document.getElementById("marksBody");
 
-// ===============================
-// Display Students
-// ===============================
 
 students.forEach(function(student, index) {
 
@@ -76,9 +71,6 @@ students.forEach(function(student, index) {
 
 });
 
-// ===============================
-// Save Marks
-// ===============================
 
 function saveMarks(index){
 

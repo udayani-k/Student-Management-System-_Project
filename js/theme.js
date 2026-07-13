@@ -1,6 +1,4 @@
-// ==============================
-// Apply Saved Theme
-// ==============================
+
 
 let theme = localStorage.getItem("theme");
 

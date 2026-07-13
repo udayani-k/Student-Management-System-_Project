@@ -1,11 +1,24 @@
-// Get students from Local Storage
-let students = JSON.parse(localStorage.getItem("students")) || [];
+// ===============================
+// Get Students & Attendance
+// ===============================
 
-// Get table body
+let students = JSON.parse(localStorage.getItem("students")) || [];
+let attendance = JSON.parse(localStorage.getItem("attendance")) || [];
+
 let attendanceBody = document.getElementById("attendanceBody");
 
-// Display all students
+// ===============================
+// Display Students
+// ===============================
+
 students.forEach(function(student, index){
+
+    // Check whether attendance already exists
+    let existingAttendance = attendance.find(function(record){
+
+        return record.studentId === student.studentId;
+
+    });
 
     let row = `
     <tr>
@@ -17,20 +30,36 @@ students.forEach(function(student, index){
         <td>${student.department}</td>
 
         <td>
-            <input type="date" id="date${index}">
+            <input
+                type="date"
+                id="date${index}"
+                value="${existingAttendance ? existingAttendance.date : ""}">
         </td>
 
         <td>
+
             <select id="status${index}">
-                <option value="Present">Present</option>
-                <option value="Absent">Absent</option>
+
+                <option value="Present"
+                ${existingAttendance && existingAttendance.status==="Present" ? "selected" : ""}>
+                Present
+                </option>
+
+                <option value="Absent"
+                ${existingAttendance && existingAttendance.status==="Absent" ? "selected" : ""}>
+                Absent
+                </option>
+
             </select>
+
         </td>
 
         <td>
+
             <button onclick="saveAttendance(${index})">
                 Save
             </button>
+
         </td>
 
     </tr>
@@ -40,13 +69,16 @@ students.forEach(function(student, index){
 
 });
 
-// Save / Update Attendance
+// ===============================
+// Save Attendance
+// ===============================
+
 function saveAttendance(index){
 
-    let date = document.getElementById("date" + index).value;
-    let status = document.getElementById("status" + index).value;
+    let date = document.getElementById("date"+index).value;
+    let status = document.getElementById("status"+index).value;
 
-    if(date === ""){
+    if(date===""){
 
         alert("Please Select Date");
         return;
@@ -65,13 +97,16 @@ function saveAttendance(index){
 
     };
 
-    let editIndex = localStorage.getItem("attendanceEditIndex");
+    // Check if attendance already exists
+    let existingIndex = attendance.findIndex(function(item){
 
-    if(editIndex !== null){
+        return item.studentId === students[index].studentId;
 
-        attendance[editIndex] = record;
+    });
 
-        localStorage.removeItem("attendanceEditIndex");
+    if(existingIndex !== -1){
+
+        attendance[existingIndex] = record;
 
         alert("Attendance Updated Successfully");
 
@@ -85,7 +120,6 @@ function saveAttendance(index){
 
     localStorage.setItem("attendance", JSON.stringify(attendance));
 
-    // Go back to Attendance History
     window.location.href = "attendancelist.html";
 
 }

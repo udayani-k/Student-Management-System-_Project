@@ -11,7 +11,8 @@ body {
     background:beige;
     min-height: 100vh;
     padding:30px;
-    background-image: url("../images/login\ image.jpg");
+    background-image:url("../images/school_software_1.png");
+    /* background-image: url("../images/login\ image.jpg"); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -57,7 +58,11 @@ label {
     font-weight: bold;
     font-size:18px;
 }
-
+.required{
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+}
 
 
 input[type="text"],
@@ -69,25 +74,7 @@ input[type="password"] {
     font-size: 8px;
 }
 
-    /* position: absolute;
-    top: 20px;
-    right: 30px;
-    color:burlywood;
-    font-size: 30px;
-    text-align:center;
-    font-weight: bold; */
-    /* .top-info{
-    text-align: right;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.top-info p{
-    margin: 4px 0;
-} */
-/* Dashboard Statistics */
+ 
 
 .dashboard-stats{
     display: grid;
@@ -149,6 +136,26 @@ button {
 button:hover {
     background-color: #084298;
 }
+.password-container{
+    position: relative;
+    width: 100%;
+}
+
+.password-container input{
+    width: 100%;
+    padding: 12px 45px 12px 12px;
+    box-sizing: border-box;
+}
+
+.password-container span{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
 
 
 
@@ -158,15 +165,7 @@ button:hover {
     color: red;
     font-weight: bold;
 }
-/* .dashboard {
-    width: 500px;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-} */
-/* Dashboard */
+
 
 .dashboard{
     width: 1200px;
@@ -195,15 +194,7 @@ button:hover {
     color: #333;
 }
 
-/* Logged User, Date & Time */
 
-/* .top-info{
-    text-align: right;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-} */
  .dashboard-wrapper{
     display: flex;
     align-items: flex-start;
@@ -211,37 +202,7 @@ button:hover {
 }
 
 .top-info{
-    /* position: fixed;
-    top: 20px;
-    right: 30px;
-
-    background: rgba(255,255,255,0.9);
-    padding: 15px;
-    border-radius: 10px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-
-    z-index: 1000;
-    width:180px; */
-    /* display:flex;
-    justify-content: space-between;
-    gap:20px;
-    margin:20px;
-    width: 200px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-    font-size: 15px;
-    font-weight: bold;
-    color: #333;
-
-    margin-left: 30px; */
+   
      display: flex;
     justify-content: space-between;
     align-items: center;

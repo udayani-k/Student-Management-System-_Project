@@ -32,3 +32,21 @@ loginForm.addEventListener("submit", function (event) {
     }
 
 });
+ function togglePassword(){
+
+    let password = document.getElementById("password");
+    let icon = document.getElementById("toggleIcon");
+
+    if(password.type === "password"){
+
+        password.type = "text";
+        icon.textContent = "🙈";
+
+    }else{
+
+        password.type = "password";
+        icon.textContent = "👁️";
+
+    }
+
+}

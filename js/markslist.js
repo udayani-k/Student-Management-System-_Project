@@ -1,6 +1,4 @@
-// ===============================
-// Get Marks from Local Storage
-// ===============================
+
 
 let marks = JSON.parse(localStorage.getItem("marks")) || [];
 
@@ -14,10 +12,6 @@ let marksTableBody = document.getElementById("marksTableBody");
 
 // Clear Table
 marksTableBody.innerHTML = "";
-
-// ===============================
-// Display Marks
-// ===============================
 
 marks.forEach(function(record, index){
 

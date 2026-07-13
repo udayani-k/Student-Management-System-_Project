@@ -6,53 +6,62 @@ let students = JSON.parse(localStorage.getItem("students")) || [];
 let marks = JSON.parse(localStorage.getItem("marks")) || [];
 let attendance = JSON.parse(localStorage.getItem("attendance")) || [];
 
+// ==========================================
+// Keep only existing students
+// ==========================================
 
-// ================= Summary Cards =================
+let validMarks = marks.filter(function(mark) {
+    return students.some(function(student) {
+        return String(student.studentId).trim() === String(mark.studentId).trim();
+    });
+});
+
+let validAttendance = attendance.filter(function(record) {
+    return students.some(function(student) {
+        return String(student.studentId).trim() === String(record.studentId).trim();
+    });
+});
+
 
 document.getElementById("totalStudents").textContent = students.length;
 
-let present = attendance.filter(function(record){
-
+let present = validAttendance.filter(function(record) {
     return record.status === "Present";
-
 }).length;
 
 document.getElementById("presentStudents").textContent = present;
 
-let absent = attendance.filter(function(record){
-
+let absent = validAttendance.filter(function(record) {
     return record.status === "Absent";
-
 }).length;
 
 document.getElementById("absentStudents").textContent = absent;
 
-if(marks.length > 0){
+if(validMarks.length > 0){
 
     let total = 0;
 
-    marks.forEach(function(student){
-
+    validMarks.forEach(function(student){
         total += Number(student.percentage);
-
     });
 
-    let average = total / marks.length;
+    let average = total / validMarks.length;
 
     document.getElementById("averageMarksCard").textContent =
-    average.toFixed(2) + "%";
+        average.toFixed(2) + "%";
+
+}else{
+
+    document.getElementById("averageMarksCard").textContent = "0%";
 
 }
 
-// ==========================================
-// Top Students
-// ==========================================
 
 let topStudentsBody = document.getElementById("topStudentsBody");
 
-let sortedMarks = [...marks];
+let sortedMarks = [...validMarks];
 
-sortedMarks.sort(function(a, b){
+sortedMarks.sort(function(a,b){
     return b.total - a.total;
 });
 
@@ -68,13 +77,11 @@ sortedMarks.slice(0,5).forEach(function(student,index){
 
 });
 
-// ==========================================
-// Failed Students
-// ==========================================
+
 
 let failedStudentsBody = document.getElementById("failedStudentsBody");
 
-marks.forEach(function(student){
+validMarks.forEach(function(student){
 
     if(student.grade === "Fail"){
 
@@ -90,15 +97,13 @@ marks.forEach(function(student){
 
 });
 
-// ==========================================
-// Highest Attendance
-// ==========================================
+
 
 let highestAttendanceBody = document.getElementById("highestAttendanceBody");
 
 let presentCount = {};
 
-attendance.forEach(function(record){
+validAttendance.forEach(function(record){
 
     if(record.status === "Present"){
 
@@ -140,15 +145,12 @@ highestAttendanceBody.innerHTML = `
 </tr>
 `;
 
-// ==========================================
-// Lowest Attendance
-// ==========================================
 
 let lowestAttendanceBody = document.getElementById("lowestAttendanceBody");
 
 let absentCount = {};
 
-attendance.forEach(function(record){
+validAttendance.forEach(function(record){
 
     if(record.status === "Absent"){
 
@@ -190,23 +192,19 @@ lowestAttendanceBody.innerHTML = `
 </tr>
 `;
 
-// ==========================================
-// Average Marks
-// ==========================================
+
 
 let averageMarks = document.getElementById("averageMarks");
 
-if(marks.length > 0){
+if(validMarks.length > 0){
 
     let total = 0;
 
-    marks.forEach(function(student){
-
+    validMarks.forEach(function(student){
         total += Number(student.percentage);
-
     });
 
-    let average = total / marks.length;
+    let average = total / validMarks.length;
 
     averageMarks.textContent = average.toFixed(2) + "%";
 
@@ -216,9 +214,7 @@ if(marks.length > 0){
 
 }
 
-// ==========================================
-// Department Wise Students
-// ==========================================
+
 
 let departmentBody = document.getElementById("departmentBody");
 
@@ -248,5 +244,3 @@ for(let dept in departments){
     `;
 
 }
-
-
